@@ -1,14 +1,17 @@
 @keyframes flicker {
   0% {
     background-color: #FEFE1D;
+    color: #010178;
   }
 
   50% {
     background-color: #010178;
+    color: #FEFE1D;
   }
 
   100% {
     background-color: #FEFE1D;
+    color: #010178;
   }
 }
 
@@ -18,7 +21,6 @@ html {
 
 body {
   background-color: #FEFE1D;
-  /*justify-content: center;*/
   margin: 0;
   font-size: 100%;
 }
@@ -26,11 +28,10 @@ body {
 #loading-screen {
   position: fixed;
   font-family: "DotGothic16", sans-serif;
-  color: #fff;
+  animation: flicker-text 0.1s infinite;
   font-weight: 900;
   font-size: 1.2rem;
   letter-spacing: 0.12em;
-  animation: blink 100ms infinite;
   top: 0;
   left: 0;
   width: 100vw;

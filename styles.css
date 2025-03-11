@@ -59,8 +59,8 @@ body {
 
 .keyvisual img {
   position: fixed;
-  width: 60vw;
-  height: 60vw;
+  width: 50vw;
+  height: 50vw;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -358,6 +358,13 @@ footer {
 .logo-container img {
   display: inline-block;
   height: 50px;
+}
+
+@media screen and (max-width: 1400px) {
+  .keyvisual img {
+    width: 60vw;
+    height: 60vw;
+  }
 }
 
 @media screen and (max-width: 1200px) {

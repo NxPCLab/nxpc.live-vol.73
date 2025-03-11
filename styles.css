@@ -1,3 +1,17 @@
+@keyframes flicker {
+  0% {
+    background-color: #FEFE1D;
+  }
+
+  50% {
+    background-color: #010178;
+  }
+
+  100% {
+    background-color: #FEFE1D;
+  }
+}
+
 html {
   overflow-x: hidden;
 }
@@ -9,14 +23,25 @@ body {
   font-size: 100%;
 }
 
-.loading.hide {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 150ms;
-}
-
-.loading p {
-  animation: blink 150ms infinite;
+#loading-screen {
+  position: fixed;
+  font-family: "DotGothic16", sans-serif;
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  animation: blink 100ms infinite;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: flicker 0.1s infinite;
+  /* ローディング中の背景色(お好みで変更) */
+  z-index: 9999;
+  /* コンテンツより前面に表示 */
 }
 
 .keyvisual {
@@ -88,21 +113,6 @@ body {
 .keyvisual-performer p {
   display: block;
   background: none;
-}
-
-.toptitle {
-  display: inline-block;
-  font-family: "DotGothic16", sans-serif;
-  font-weight: 900;
-  font-size: 1rem;
-  color: white;
-  background-color: black;
-  position: fixed;
-  top: 5%;
-  left: 0%;
-  padding-left: 5vw;
-  padding-right: 10px;
-  z-index: 10;
 }
 
 .eventname {
@@ -356,10 +366,20 @@ footer {
   }
 }
 
+@media screen and (max-width: 1070px) {
+  .timetable img {
+    width: 70vw;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .keyvisual img {
     width: 90vw;
     height: 90vw;
+  }
+
+  .timetable img {
+    width: 80vw;
   }
 
   .eventname {

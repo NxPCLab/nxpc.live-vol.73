@@ -26,9 +26,16 @@
 </head>
 
 <body>
-  <!-- <div class="loading">
-    <p>Now loading...</p>
-  </div> -->
+  <div id="loading-screen">Now loading...</div>
+  <script>
+    // 「ページの読み込みが完了」したら実行
+    // （「DOM の構造（HTML）が完成し、画像やスタイルなども全て読み込まれた」タイミング）
+    window.addEventListener('load', function () {
+      const loadingScreen = document.getElementById('loading-screen');
+      // ローディング要素を消す
+      loadingScreen.style.display = 'none';
+    });
+  </script>
   <div class="keyvisual-container">
     <div class="keyvisual">
       <img src="img/nxpc73.webp" alt="" />
@@ -53,9 +60,9 @@
     <p>NxPC.Live vol.73 NxPC×SAZAREBA
       <br />
       <br>
-      ブロックチェーンをアートの新しいメディウムとして捉える展覧会"Proof of
-      X"のアフターパーティーがNxPC.Labとのコラボレーションで開催決定！ Proof
-      of XとNxPC.Labの相互作用による実験的音楽体験をお楽しみください。
+      メディアテクノロジーを駆使して、音楽体験を拡張してきたNxPC.Labと、映像や音楽を作る人やクノロジーを扱う若い人の交流の場を作ることを目的として活動してきたさざれ場とがコラボレーションしたAudio/Visualイベントが開催決定！
+      <br>
+      ゲストにはtomad、Jackson kakiを迎え、音楽・映像・テクノロジーが交わる特別な夜をお届けします。
     </p>
     <br>
     <br />
@@ -102,9 +109,13 @@
         <h2>tomad [GUEST]</h2>
         <div class="performer-detail">
           <img src="img/artist-img/tomad.webp" alt="" />
-          <p>
-            hogehogehogehoge
-          </p>
+          <div class="performer-detail-sub">
+            <p>
+              2005年、当時15歳でインターネットレーベル「Maltine
+              Records」を開始。これまでに170タイトルをリリース。国内外のメディアにて紹介され、ダンス・ポップ・ミュージックの新しいシーンと、東京の同時代のイメージを象徴する存在として注目される。これまでにマニラや中国、ニューヨークでイベントを開催。海外アーティストの楽曲リリースも多数。2015年には設立10周年を記念し、レーベルの活動をまとめた『Maltine
+              Book』（スイッチパブリッシング）を刊行。
+            </p>
+          </div>
         </div>
       </div>
       <div class="performer-frame">
@@ -126,7 +137,7 @@
         <div class="performer-detail">
           <img src="img/artist-img/hrx.webp" alt="" />
           <p>
-            乱数発生期(RNG)を使います。観客の精神状態によって乱数が変化する可能性があります。
+            乱数発生器は観客に反応するのか? 乱数発生器が観客の情動に反応するというアイデアを実証するための実験的バフォーマンス
           </p>
         </div>
       </div>

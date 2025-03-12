@@ -39,7 +39,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: flicker 0.1s infinite;
+  animation: flicker 0.5s infinite;
   /* ローディング中の背景色(お好みで変更) */
   z-index: 9999;
   /* コンテンツより前面に表示 */
@@ -389,6 +389,14 @@ footer {
     width: 70vw;
     height: 70vw;
   }
+
+  .top-performer {
+    display: none;
+  }
+
+  .keyvisual-performer {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1070px) {
@@ -455,7 +463,7 @@ footer {
 
   .logo-container {
     gap: 10px;
-    top: 80vh;
+    bottom: 5vh;
     left: 5vw;
   }
 
@@ -464,9 +472,8 @@ footer {
   }
 
   .footer-credit {
-    position: absolute;
     text-align: left;
-    top: 60vh;
+    bottom: 10vh;
     left: 5vw;
     display: flex;
     flex-direction: column;

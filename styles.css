@@ -275,11 +275,12 @@ p {
   bottom: 0;
   right: 0;
   width: 90%;
+  background-color: #ffffffd1;
 }
 
 .performer-detail-sub p {
   bottom: -60px;
-  background-color: #ffffffa9;
+  background-color: #ffffffb6;
 }
 
 .performer-detail img {

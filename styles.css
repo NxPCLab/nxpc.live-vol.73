@@ -101,6 +101,17 @@ body {
   height: 100vh;
 }
 
+.top-performer {
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+}
+
+.top-performer p {
+  display: block;
+  background: none;
+}
+
 .keyvisual-performer {
   position: fixed;
   bottom: 10vh;
@@ -202,6 +213,7 @@ p {
   line-height: 1.5rem;
   letter-spacing: 0.03em;
   background-color: white;
+  color: #010178;
   padding-left: 0.25vw;
   padding-right: 0.25vw;
   padding-top: 0.25vw;
@@ -339,7 +351,7 @@ footer {
 }
 
 .footer-credit {
-  position: absolute;
+  position: fixed;
   text-align: right;
   bottom: 30vh;
   right: 5vw;
@@ -347,16 +359,20 @@ footer {
   flex-direction: column;
 }
 
+.footer-credit p {
+  display: block;
+  background: none;
+}
+
 .logo-container {
-  position: absolute;
+  position: fixed;
   bottom: 20vh;
   right: 5vw;
-  display: flex;
   gap: 30px;
+  flex-direction: row;
 }
 
 .logo-container img {
-  display: inline-block;
   height: 50px;
 }
 
@@ -419,6 +435,10 @@ footer {
     font-size: 1rem;
     top: 60vh;
     position: absolute;
+  }
+
+  .top-performer {
+    display: none;
   }
 
   .keyvisual-performer {

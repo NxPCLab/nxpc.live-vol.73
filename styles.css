@@ -103,19 +103,27 @@ body {
 
 .top-performer {
   position: absolute;
-  bottom: 10vh;
   left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .top-performer p {
   display: block;
   background: none;
+  margin-bottom: 5px;
 }
 
 .keyvisual-performer {
   position: fixed;
-  bottom: 10vh;
+  top: 0;
   left: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .sm-footer-performer {
@@ -125,6 +133,7 @@ body {
 .keyvisual-performer p {
   display: block;
   background: none;
+  margin-bottom: 5px;
 }
 
 .eventname {
